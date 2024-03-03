@@ -2,6 +2,7 @@
 #include "OpenGLAPI.hpp"
 
 using namespace OpenGLAPI;
+    void APIENTRY MessageCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam);
 
     GLFWwindow * OpenGLAPI::window;
 
@@ -66,7 +67,7 @@ using namespace OpenGLAPI;
     }
 
     //Função responsável por mensagens de debug
-    void APIENTRY OpenGLAPI::MessageCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam )
+    void APIENTRY MessageCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam )
     {
     fprintf( stderr, "GL CALLBACK: %s type = 0x%x, severity = 0x%x, message = %s\n", ( type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : "" ), type, severity, message );
     switch (source)
@@ -122,7 +123,7 @@ using namespace OpenGLAPI;
 
         DebugManager::DebugManager(){
         glEnable(GL_DEBUG_OUTPUT );
-        glDebugMessageCallback(OpenGLAPI::MessageCallback, 0 );
+        glDebugMessageCallback(MessageCallback, 0 );
         }
 
 
