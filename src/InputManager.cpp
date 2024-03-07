@@ -49,4 +49,5 @@ void InputManager::getMouseValue(){
         if(OpenGLAPI::Manager::InputManager::getInputManager()->keyArray[scancode] != NULL){
                 InputManager::getInputManager()->keyArray[scancode](scancode);
             }
+            return 0;
         }

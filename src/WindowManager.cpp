@@ -1,5 +1,7 @@
 #include "WindowManager.hpp"
 
+//TODO: Implement
+
 //Window manager pointer initialiation
 WindowManager * WindowManager::manager = nullptr;
 
@@ -24,5 +26,10 @@ WindowManager::~WindowManager(){
 
 void WindowManager::deleteWindow(std::list<Window*>::iterator &Window){
 
+}
+
+
+WindowManager::WindowManager(){
+    
 }
 

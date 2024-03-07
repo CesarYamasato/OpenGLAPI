@@ -1,7 +1,7 @@
 #ifndef OPENGLAPI_SHADER
 #define OPENGLAPI_SHADER
 
-#include <Shader.h>
+#include "Shader.h"
 
 namespace OpenGLAPI{ namespace ShaderComponent{
 

@@ -7,10 +7,8 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <GLFW/glfw3.h>
 #include "common.hpp"
-#include <Shader.h>
+#include "Shader.h"
 #include "Texture.hpp"
-
-void keyCallbackFunction(GLFWwindow*, int, int, int, int);
 
 namespace OpenGLAPI{ namespace Renderer{
     //Classe para reenderizar sprites
