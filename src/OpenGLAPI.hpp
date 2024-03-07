@@ -8,9 +8,16 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 #include <filesystem>
-#include <Shader.h>
+
 #include "common.hpp"
 #include "InputManager.hpp"
+#include "DebugManager.hpp"
+#include "SpriteRenderer.hpp"
+#include "Shader.h"
+#include "TextureComponent.hpp"
+#include "Texture.hpp"
+#include "Window.hpp"
+#include "animator.hpp"
 
 
 namespace OpenGLAPI{
