@@ -40,7 +40,7 @@ public:
             // close file handlers
             vShaderFile.close();
             fShaderFile.close();
-          
+        
             // convert stream into string
             vertexCode   = vShaderStream.str();
             fragmentCode = fShaderStream.str();
@@ -99,19 +99,19 @@ public:
     }
     void setSampler(const std::string &name) const
     {
-         glUniform1i(glGetUniformLocation(ID, name.c_str()), 0);
+        glUniform1i(glGetUniformLocation(ID, name.c_str()), 0);
     }
     void setVec2(const std::string &name, double value[]) const
     {
-         glUniform2f(glGetUniformLocation(ID, name.c_str()), value[0], value[1]);
+        glUniform2f(glGetUniformLocation(ID, name.c_str()), value[0], value[1]);
     }
     void setVec3(const std::string &name, double value[]) const
     {
-         glUniform3f(glGetUniformLocation(ID, name.c_str()), value[0], value[1], value[2]);
+        glUniform3f(glGetUniformLocation(ID, name.c_str()), value[0], value[1], value[2]);
     }
-     void setVec4(const std::string &name, double value[]) const
+    void setVec4(const std::string &name, double value[]) const
     {
-         glUniform4f(glGetUniformLocation(ID, name.c_str()), value[0], value[1], value[2], value[3]);
+        glUniform4f(glGetUniformLocation(ID, name.c_str()), value[0], value[1], value[2], value[3]);
     }
     void setMat4(const std::string &name, const glm::mat4 &mat) const
     {
@@ -119,7 +119,7 @@ public:
     }
     void setSampler(const std::string &name, GLenum index) const
     {
-         glUniform1i(glGetUniformLocation(ID, name.c_str()),index);
+        glUniform1i(glGetUniformLocation(ID, name.c_str()),index);
     }
 
 private:
